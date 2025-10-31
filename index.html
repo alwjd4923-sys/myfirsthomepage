@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>프로틴랩 - 닭가슴살 전문 브랜드 (Demo)</title>
+  <meta name="description" content="20-30대 MZ세대 타겟의 캐주얼하고 전문적인 닭가슴살 판매 사이트 데모입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2E8B57; /* 자연스러운 그린 */
+      --accent-2:#1f6f4c;
+      --muted:#6b7280;
+      --bg:#f7f8fa;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow: 0 8px 24px rgba(16,24,40,0.06);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:'Noto Sans KR', 'Poppins', system-ui, -apple-system; background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:var(--max-width);margin:36px auto;padding:0 20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    .logo h1{margin:0;font-size:18px;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:28px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8));padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .eyebrow{color:var(--accent);font-weight:700;font-size:13px}
+    h2{margin:8px 0 12px;font-size:28px}
+    p.lead{margin:0 0 18px;color:var(--muted);line-height:1.6}
+    .features{display:flex;gap:12px;margin-bottom:18px}
+    .pill{background:#eef7f2;color:var(--accent-2);padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px}
+    .cta-row{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid #e6edf0;color:var(--muted)}
+
+    .hero-right{display:flex;flex-direction:column;gap:12px}
+    .card-mini{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+    .card-mini img{width:96px;height:72px;object-fit:cover;border-radius:10px}
+    .meta{font-size:13px;color:var(--muted)}
+
+    /* Products */
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}
+    .product{background:var(--card);border-radius:12px;padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+    .product img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .product h3{margin:0;font-size:16px}
+    .meta-row{display:flex;justify-content:space-between;align-items:center}
+    .badge{background:#f0fdf4;color:#064e3b;padding:6px 8px;border-radius:8px;font-weight:700;font-size:12px}
+    .price{font-weight:800}
+
+    /* Trust / Why */
+    .why{display:flex;gap:14px;margin:24px 0}
+    .why .box{flex:1;background:linear-gradient(180deg,#fff,#fbfffb);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    .why h4{margin:0 0 8px}
+
+    /* Reviews */
+    .reviews{display:flex;gap:12px;overflow:auto;padding-bottom:8px}
+    .review{min-width:240px;background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow)}
+
+    footer{margin:40px 0 80px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .container{padding:0 18px}
+    }
+    @media (max-width:600px){
+      .products{grid-template-columns:1fr}
+      nav{display:none}
+      .logo h1{font-size:16px}
+      h2{font-size:22px}
+    }
+
+    /* small util */
+    .small{font-size:13px;color:var(--muted)}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">PL</div>
+        <div>
+          <h1>프로틴랩</h1>
+          <div class="small">닭가슴살·프로틴밀 전문 (Demo)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">상품</a>
+        <a href="#why">왜 프로틴랩?</a>
+        <a href="#reviews">리뷰</a>
+        <a href="#contact">문의</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">신상품 • 인기 급상승</div>
+        <h2>바쁜 MZ를 위한, 맛있고 간편한 닭가슴살</h2>
+        <p class="lead">칼로리와 단백질을 정밀하게 관리한 레시피. 캐주얼한 맛, 전문가의 레시피로 만든 신뢰의 닭가슴살을 만나보세요.</p>
+
+        <div class="features">
+          <div class="pill">고단백 20~30g</div>
+          <div class="pill">저지방 · 저염</div>
+          <div class="pill">무항생제·국내산</div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="scrollToSection('products')">지금 쇼핑하기</button>
+          <button class="btn btn-ghost" onclick="openSubscribe()">정기배송 신청</button>
+        </div>
+
+        <div style="margin-top:18px;font-size:13px;color:var(--muted)">빠른 배송 · 7일간 냉장보관 보장 · 안전 포장</div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card-mini">
+          <img src="https://picsum.photos/seed/chicken1/300/200" alt="제품 이미지">
+          <div>
+            <div style="font-weight:800">시그니처 허브 닭가슴살</div>
+            <div class="meta">120g · 단백질 28g · 135 kcal</div>
+          </div>
+        </div>
+
+        <div class="card-mini">
+          <img src="https://picsum.photos/seed/chicken2/300/200" alt="제품 이미지">
+          <div>
+            <div style="font-weight:800">매콤 바비큐 닭가슴살</div>
+            <div class="meta">120g · 단백질 26g · 140 kcal</div>
+          </div>
+        </div>
+
+        <div class="card-mini">
+          <img src="https://picsum.photos/seed/meal1/300/200" alt="샘플 밀키트">
+          <div>
+            <div style="font-weight:800">프로틴 도시락 세트</div>
+            <div class="meta">도시락 · 소스 포함 · 샘플 이미지</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+      <h3 style="margin:6px 0 12px">인기 상품</h3>
+      <div class="products" id="productGrid">
+        <!-- product items inserted by JS -->
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section id="why" class="why">
+      <div class="box">
+        <h4>전문 레시피</h4>
+        <p class="small muted">영양사가 설계한 레시피로 단백질은 높이고 불필요한 지방과 나트륨은 낮췄습니다. 트레이너/영양 상담 연동 서비스 제공(추후 연동예정).</p>
+      </div>
+      <div class="box">
+        <h4>투명한 원재료</h4>
+        <p class="small muted">원산지, 제조일, 영양성분을 모든 제품에 표기합니다. 무항생제 인증, HACCP 공정으로 안전하게 제조됩니다.</p>
+      </div>
+      <div class="box">
+        <h4>친숙한 MZ 디자인</h4>
+        <p class="small muted">캐주얼하지만 전문적인 톤으로 20~30대가 공감할 수 있는 UI/UX를 제공합니다. 빠른 구매 경험을 최우선으로 설계했습니다.</p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" style="margin-top:18px">
+      <h3 style="margin:6px 0 12px">고객 리뷰</h3>
+      <div class="reviews" id="reviewList">
+        <div class="review">
+          <div style="font-weight:800">@minju_29</div>
+          <div class="small muted">매운맛이 딱 좋아요. 다이어트 중인데 포만감도 있고 맛있습니다!</div>
+        </div>
+        <div class="review">
+          <div style="font-weight:800">@gym_hyuk</div>
+          <div class="small muted">단백질 함량이 높아서 운동 후 먹기 좋아요. 냉동 보관도 편해요.</div>
+        </div>
+        <div class="review">
+          <div style="font-weight:800">@daily_eun</div>
+          <div class="small muted">도시락 세트로 구입했는데 소스도 맛있고 포장도 깔끔해요.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="margin-top:26px;background:linear-gradient(180deg,#f8fffb,#ffffff);padding:20px;border-radius:12px;box-shadow:var(--shadow)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:800">정기배송으로 단백질 루틴을 쉽게</div>
+          <div class="small muted">주 1회 / 주 2회 / 월 1회 플랜 제공 · 언제든 변경 가능</div>
+        </div>
+        <div>
+          <button class="btn btn-primary" onclick="openSubscribe()">정기배송 시작하기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-top:18px">
+        <div style="max-width:520px">
+          <strong>프로틴랩 (Demo)</strong>
+          <div class="small muted">주소: 데모시 데모구 · 문의: demo@proteinlab.example</div>
+          <div style="margin-top:6px" class="small muted">© 2025 ProteinLab. All rights reserved.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="#contact" class="small muted">문의하기</a>
+          <a href="#" class="small muted">이용약관</a>
+          <a href="#" class="small muted">개인정보처리방침</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Simple product + cart JS (Demo) -->
+  <script>
+    const products = [
+      {id:1,name:'시그니처 허브 닭가슴살',desc:'담백한 허브향, 훈제 느낌 없이 깔끔한 맛',kcal:135,protein:28,price:6200,img:'https://picsum.photos/seed/p1/800/600'},
+      {id:2,name:'매콤 바비큐 닭가슴살',desc:'머슬메이트가 사랑하는 매콤소스',kcal:140,protein:26,price:6400,img:'https://picsum.photos/seed/p2/800/600'},
+      {id:3,name:'갈릭 버터 닭가슴살',desc:'갈릭의 풍미와 부드러운 버터향',kcal:150,protein:27,price:6800,img:'https://picsum.photos/seed/p3/800/600'},
+      {id:4,name:'레몬 페퍼 닭가슴살',desc:'상큼한 레몬 향, 깔끔한 마무리',kcal:130,protein:25,price:6000,img:'https://picsum.photos/seed/p4/800/600'},
+      {id:5,name:'허니 머스타드 닭가슴살',desc:'달콤짭짤 조합, 초보자 추천',kcal:160,protein:24,price:6500,img:'https://picsum.photos/seed/p5/800/600'},
+      {id:6,name:'스파이시 칠리 닭가슴살',desc:'강렬한 매운맛, 소량으로도 만족',kcal:145,protein:27,price:6600,img:'https://picsum.photos/seed/p6/800/600'}
+    ];
+
+    const productGrid = document.getElementById('productGrid');
+    const reviewList = document.getElementById('reviewList');
+
+    function renderProducts(){
+      productGrid.innerHTML = '';
+      products.forEach(p=>{
+        const div = document.createElement('div'); div.className='product';
+        div.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <div style=\"display:flex;justify-content:space-between;align-items:center\">
+            <h3>${p.name}</h3>
+            <div class=\"badge\">${p.protein}g</div>
+          </div>
+          <div class=\"small muted\">${p.desc}</div>
+          <div class=\"meta-row\">
+            <div class=\"price\">₩${(p.price).toLocaleString()}</div>
+            <div style=\"display:flex;gap:8px\">
+              <button class=\"btn btn-ghost\" onclick=\"openQuickView(${p.id})\">상세보기</button>
+              <button class=\"btn btn-primary\" onclick=\"addToCart(${p.id})\">담기</button>
+            </div>
+          </div>
+        `;
+        productGrid.appendChild(div);
+      });
+    }
+
+    // Demo cart in localStorage
+    function addToCart(id){
+      const cart = JSON.parse(localStorage.getItem('demo_cart')||'[]');
+      const item = products.find(x=>x.id===id);
+      const found = cart.find(c=>c.id===id);
+      if(found) found.qty++;
+      else cart.push({id:item.id,name:item.name,price:item.price,qty:1});
+      localStorage.setItem('demo_cart',JSON.stringify(cart));
+      alert(item.name + ' 이(가) 장바구니에 담겼습니다.');
+    }
+
+    function openQuickView(id){
+      const p = products.find(x=>x.id===id);
+      const html = `상품명: ${p.name}\n단백질: ${p.protein}g\n칼로리: ${p.kcal} kcal\n가격: ₩${p.price.toLocaleString()}\n\n${p.desc}`;
+      alert(html);
+    }
+
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    }
+
+    function openSubscribe(){
+      const plan = prompt('정기배송 선택: 주 1회 / 주 2회 / 월 1회 중 입력해주세요 (예: 주 1회)');
+      if(!plan) return;
+      alert('정기배송 신청('+plan+')이 접수되었습니다. (Demo)');
+    }
+
+    // Init
+    renderProducts();
+  </script>
+</body>
+</html>
